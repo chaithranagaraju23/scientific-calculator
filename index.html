@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="calculator-wrapper">
+        <div class="calculator">
+            <!-- Header & Badges -->
+            <div class="calculator-header">
+                <span class="calc-title">Scientific</span>
+                <div class="status-badges">
+                    <span id="badge-angle" class="badge active">DEG</span>
+                    <span id="badge-2nd" class="badge">2nd</span>
+                    <span id="badge-mem" class="badge memory">M</span>
+                </div>
+            </div>
+
+            <!-- Display -->
+            <div class="display">
+                <div class="expression-line" id="expression-display"></div>
+                <div class="result-line" id="result-display">0</div>
+            </div>
+
+            <!-- Mode & Memory Control Bar -->
+            <div class="control-bar">
+                <div class="mode-toggle">
+                    <button type="button" class="mode-btn active" id="btn-deg">DEG</button>
+                    <button type="button" class="mode-btn" id="btn-rad">RAD</button>
+                </div>
+                <div class="memory-buttons">
+                    <button type="button" class="mem-btn" data-mem="MC" title="Memory Clear">MC</button>
+                    <button type="button" class="mem-btn" data-mem="MR" title="Memory Recall">MR</button>
+                    <button type="button" class="mem-btn" data-mem="M+" title="Memory Add">M+</button>
+                    <button type="button" class="mem-btn" data-mem="M-" title="Memory Subtract">M−</button>
+                    <button type="button" class="mem-btn" data-mem="Ans" title="Last Answer">Ans</button>
+                </div>
+            </div>
+
+            <!-- Main Keypad -->
+            <div class="keypad">
+                <!-- Row 1 -->
+                <button type="button" class="btn sci second-btn" id="btn-2nd">2<sup>nd</sup></button>
+                <button type="button" class="btn sci" data-insert="(">(</button>
+                <button type="button" class="btn sci" data-insert=")">)</button>
+                <button type="button" class="btn action" id="btn-ac">AC</button>
+                <button type="button" class="btn action del" id="btn-del">DEL</button>
+
+                <!-- Row 2 -->
+                <button type="button" class="btn sci func-btn" data-primary="sin" data-secondary="asin">sin</button>
+                <button type="button" class="btn sci func-btn" data-primary="cos" data-secondary="acos">cos</button>
+                <button type="button" class="btn sci func-btn" data-primary="tan" data-secondary="atan">tan</button>
+                <button type="button" class="btn sci" data-insert="π">&pi;</button>
+                <button type="button" class="btn operator" data-op="÷">&divide;</button>
+
+                <!-- Row 3 -->
+                <button type="button" class="btn sci func-btn" data-primary="ln" data-secondary="exp">ln</button>
+                <button type="button" class="btn sci func-btn" data-primary="log" data-secondary="tenpow">log</button>
+                <button type="button" class="btn sci func-btn" data-primary="sqrt" data-secondary="sqr">&radic;</button>
+                <button type="button" class="btn sci func-btn" data-primary="pow"
+                    data-secondary="cube">x<sup>y</sup></button>
+                <button type="button" class="btn operator" data-op="×">&times;</button>
+
+                <!-- Row 4 -->
+                <button type="button" class="btn sci func-btn" data-primary="fact" data-secondary="cbrt">x!</button>
+                <button type="button" class="btn number" data-num="7">7</button>
+                <button type="button" class="btn number" data-num="8">8</button>
+                <button type="button" class="btn number" data-num="9">9</button>
+                <button type="button" class="btn operator" data-op="−">&minus;</button>
+
+                <!-- Row 5 -->
+                <button type="button" class="btn sci func-btn" data-primary="recip" data-secondary="abs">1/x</button>
+                <button type="button" class="btn number" data-num="4">4</button>
+                <button type="button" class="btn number" data-num="5">5</button>
+                <button type="button" class="btn number" data-num="6">6</button>
+                <button type="button" class="btn operator" data-op="+">+</button>
+
+                <!-- Row 6 -->
+                <button type="button" class="btn sci" data-insert="%">%</button>
+                <button type="button" class="btn number" data-num="1">1</button>
+                <button type="button" class="btn number" data-num="2">2</button>
+                <button type="button" class="btn number" data-num="3">3</button>
+                <button type="button" class="btn equals" id="btn-equals">=</button>
+
+                <!-- Row 7 -->
+                <button type="button" class="btn sci" data-insert="e">e</button>
+                <button type="button" class="btn number" id="btn-negate">&plusmn;</button>
+                <button type="button" class="btn number" data-num="0">0</button>
+                <button type="button" class="btn number" data-num=".">.</button>
+            </div>
+
+            <div class="keyboard-hint">
+                Keyboard supported &bull; Press 'd' for Deg/Rad &bull; Enter for =
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
